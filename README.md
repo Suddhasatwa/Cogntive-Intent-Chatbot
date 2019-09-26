@@ -31,12 +31,6 @@ All the constants are pretty self explanatory other than "vanilla" under agent w
 ## Test (or Train) with an Actual User
 You can test the agent by inputing your own actions as the user (instead of using a user sim) by setting "usersim" under run in constants.json to false. You input an action and a success indicator every step of an episode/conversation in console. The format for the action input is: intent/inform slots/request slots.
 
-Example action inputs:
-- request/moviename: room, date: friday/starttime, city, theater
-- inform/moviename: zootopia/
-- request//starttime
-- done//
-
 In addition the console will ask for an indicator on whether the agent succeeded yet (other than after the initial action input of an episode). Allowed inputs are -1 for loss, 0 for no outcome yet, 1 for success. 
 
 ## My Data
