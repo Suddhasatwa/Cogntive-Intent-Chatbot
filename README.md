@@ -1,6 +1,5 @@
 # Goal-Oriented Chatbot trained with Deep Reinforcement Learning
 
-Based off of the code repo [TC-Bot](https://github.com/MiuLab/TC-Bot) and paper [End-to-End Task-Completion Neural Dialogue Systems](http://aclweb.org/anthology/I17-1074). This repo is a simplified version of TC-Bot, it performs at a similar level of accuracy, although it is not directly comparable.
 
 ## Details
 
@@ -8,14 +7,11 @@ This shows how to train a simple DQN agent with deep reinforcement learning as a
 
 Here is a diagram from the paper for TC-Bot, and is similar to the flow of dialogue used in this project other than the LU and NLG components:
 
-![Diagram](https://github.com/maxbren/GO-Bot_DRL/blob/master/assets/paper_diagram.PNG)
 
 In addition to removing NL, there are changes to the success conditions, the DQN agent optimizer and a few other minor changes. Therefore, accuracy should not be compared directly between TC-Bot and this repo. 
 
-The database is of movie tickets, the same DB used in TC-Bot. Both the pickle and text versions of the data can be seen in the [data directory](https://github.com/maxbren/GO-Bot-DRL/tree/master/data).
 
-## Important Note
-A 5-part tutorial series that describes and goes through this code in detail can be found on medium [here](https://medium.com/@maxbrenner110/training-a-goal-oriented-chatbot-with-deep-reinforcement-learning-part-i-introduction-and-dce3af21d383)!
+
 
 ## Dependencies
 - Python >= 3.5
@@ -31,7 +27,6 @@ You can also test an agent with ```python test.py```. But make sure to load weig
 
 All the constants are pretty self explanatory other than "vanilla" under agent which means DQN (true) or Double DQN (false). Defualt is vanilla DQN. 
 
-Note: If you get an unpickling error in [train](https://github.com/maxbren/GO-Bot-DRL/blob/master/train.py#L46) or [test](https://github.com/maxbren/GO-Bot-DRL/blob/master/test.py#L43) then run ```python pickle_converter.py``` and that should fix it
 
 ## Test (or Train) with an Actual User
 You can test the agent by inputing your own actions as the user (instead of using a user sim) by setting "usersim" under run in constants.json to false. You input an action and a success indicator every step of an episode/conversation in console. The format for the action input is: intent/inform slots/request slots.
@@ -49,4 +44,4 @@ Used hyperparameters from constants.json.
 
 Table of episodes (every 2000 out of 40000) by max success rate of a period/train frequency (every 100 episodes) up to that episode:
 
-![Data Table](https://github.com/maxbren/GO-Bot_DRL/blob/master/assets/data_table.PNG)
+
