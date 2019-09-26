@@ -7,8 +7,7 @@ from dialogue_config import rule_requests, agent_actions
 import re
 
 
-# Some of the code based off of https://jaromiru.com/2016/09/27/lets-make-a-dqn-theory/
-# Note: In original paper's code the epsilon is not annealed and annealing is not implemented in this code either
+
 
 
 class DQNAgent:
